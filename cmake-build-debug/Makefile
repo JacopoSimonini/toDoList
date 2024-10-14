@@ -223,33 +223,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-toDo.obj: toDo.cpp.obj
-
-.PHONY : toDo.obj
-
-# target to build an object file
-toDo.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/toDo.cpp.obj
-.PHONY : toDo.cpp.obj
-
-toDo.i: toDo.cpp.i
-
-.PHONY : toDo.i
-
-# target to preprocess a source file
-toDo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/toDo.cpp.i
-.PHONY : toDo.cpp.i
-
-toDo.s: toDo.cpp.s
-
-.PHONY : toDo.s
-
-# target to generate assembly for a file
-toDo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/toDo.cpp.s
-.PHONY : toDo.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -268,9 +241,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... toDo.obj
-	@echo ... toDo.i
-	@echo ... toDo.s
 .PHONY : help
 
 

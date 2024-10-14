@@ -5,7 +5,7 @@
 #ifndef TODOLIST_LISTOFLISTS_H
 #define TODOLIST_LISTOFLISTS_H
 
-#include "list"
+#include "list.h"
 #include <list>
 
 using namespace std;
@@ -19,7 +19,7 @@ public:
 
     void removeList(const std::string& title);
 
-    void displayAll() const;
+    void displayAll();
 };
 
 

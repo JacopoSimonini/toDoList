@@ -93,12 +93,12 @@ clean: CMakeFiles/ToDoList.dir/clean
 CMakeFiles/ToDoList.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5 "Built target ToDoList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4 "Built target ToDoList"
 .PHONY : CMakeFiles/ToDoList.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ToDoList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ToDoList.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/ToDoList.dir/rule

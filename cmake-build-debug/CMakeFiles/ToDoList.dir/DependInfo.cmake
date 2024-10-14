@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/simon/Desktop/C++ projects/ToDoList/list.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/list.cpp.obj"
   "C:/Users/simon/Desktop/C++ projects/ToDoList/listOfLists.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/listOfLists.cpp.obj"
   "C:/Users/simon/Desktop/C++ projects/ToDoList/main.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/main.cpp.obj"
-  "C:/Users/simon/Desktop/C++ projects/ToDoList/toDo.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/toDo.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

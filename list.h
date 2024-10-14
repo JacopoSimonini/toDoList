@@ -31,6 +31,10 @@ void displayNotCompleted();
 
 void display() const;
 
+const string &getTitle() const {
+    return title;
+}
+
 };
 
 #endif //TODOLIST_LIST_H

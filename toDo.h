@@ -6,6 +6,7 @@
 #define TODOLIST_TODO_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -35,8 +36,7 @@ public:
     }
 
     void display() const {
-        std::cout << "ToDo: " << name
-                  << " | Completed: " << (completed ? "Yes" : "No") << std::endl;
+        cout << "ToDo: " << name<< " | Completed: " << (completed ? "Yes" : "No") << endl;
     }
 };
 

@@ -95,9 +95,6 @@
 		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/main.cpp">
 			<Option target="ToDoList"/>
 		</Unit>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/toDo.cpp">
-			<Option target="ToDoList"/>
-		</Unit>
 		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/toDo.h">
 			<Option target="ToDoList"/>
 		</Unit>
