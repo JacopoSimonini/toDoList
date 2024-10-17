@@ -35,6 +35,10 @@ const string &getTitle() const {
     return title;
 }
 
+const list<ToDo>& getTodos() const {
+    return lista;
+}
+
 };
 
 #endif //TODOLIST_LIST_H

@@ -9,12 +9,17 @@
 using namespace std;
 
 void ListOfList::newList(const string& title) {
+    bool verify = false;
     for(const auto& list : lists){
-        if(title == list.getTitle())
-            throw (invalid_argument) "You cannot have lists with the same titles";
+        if(title == list.getTitle()){
+           cout << "You cannot have lists with the same titles" <<endl;
+           verify = true;
+        }
     }
-    List elenco(title);
-    lists.push_back(elenco);
+    if(!verify){
+        List elenco(title);
+        lists.push_back(elenco);
+    }
 }
 
 void ListOfList::removeList(const string& title) {
@@ -36,8 +41,19 @@ void ListOfList::removeList(const string& title) {
 }
 
 void ListOfList::displayAll() {
-    std::cout << "List:" << std::endl;
+    cout << "List:" << endl;
     for (const auto& list : lists){
         list.display();
     }
+    cout << "End List" << endl;
 }
+
+List& ListOfList::getList(const string& title) {
+    for (auto& list : lists) {
+        if (list.getTitle() == title) {
+            return list;
+        }
+    }
+    throw (out_of_range) "List not found";
+}
+

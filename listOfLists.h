@@ -20,6 +20,14 @@ public:
     void removeList(const std::string& title);
 
     void displayAll();
+
+    List& getList(const string& title);
+
+
+    const list<List>& getLists() const {
+        return lists;
+    }
+
 };
 
 

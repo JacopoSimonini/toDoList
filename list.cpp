@@ -9,7 +9,18 @@
 using namespace std;
 
 void List::add(const ToDo& todo) {
-    lista.push_back(todo);
+    bool verify = false;
+    for(const auto& i : lista){
+        if( todo.getName() == i.getName()){
+            cout << "You cannot have todo with the same name" <<endl;
+            verify = true;
+        }
+    }
+    if(!verify){
+        lista.push_back(todo);
+    }
+
+
 }
 
 void List::remove(const string& name) {
