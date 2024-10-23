@@ -142,6 +142,19 @@ ToDoList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/build
 .PHONY : ToDoList/fast
 
+#=============================================================================
+# Target rules for targets named TestProject
+
+# Build rule for target.
+TestProject: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TestProject
+.PHONY : TestProject
+
+# fast build rule for target.
+TestProject/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/build
+.PHONY : TestProject/fast
+
 list.obj: list.cpp.obj
 
 .PHONY : list.obj
@@ -149,6 +162,7 @@ list.obj: list.cpp.obj
 # target to build an object file
 list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.obj
 .PHONY : list.cpp.obj
 
 list.i: list.cpp.i
@@ -158,6 +172,7 @@ list.i: list.cpp.i
 # target to preprocess a source file
 list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.i
 .PHONY : list.cpp.i
 
 list.s: list.cpp.s
@@ -167,6 +182,7 @@ list.s: list.cpp.s
 # target to generate assembly for a file
 list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.s
 .PHONY : list.cpp.s
 
 listOfLists.obj: listOfLists.cpp.obj
@@ -176,6 +192,7 @@ listOfLists.obj: listOfLists.cpp.obj
 # target to build an object file
 listOfLists.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.obj
 .PHONY : listOfLists.cpp.obj
 
 listOfLists.i: listOfLists.cpp.i
@@ -185,6 +202,7 @@ listOfLists.i: listOfLists.cpp.i
 # target to preprocess a source file
 listOfLists.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.i
 .PHONY : listOfLists.cpp.i
 
 listOfLists.s: listOfLists.cpp.s
@@ -194,6 +212,7 @@ listOfLists.s: listOfLists.cpp.s
 # target to generate assembly for a file
 listOfLists.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.s
 .PHONY : listOfLists.cpp.s
 
 main.obj: main.cpp.obj
@@ -223,6 +242,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test.obj: test.cpp.obj
+
+.PHONY : test.obj
+
+# target to build an object file
+test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.obj
+.PHONY : test.cpp.obj
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -231,6 +277,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... TestProject
 	@echo ... ToDoList
 	@echo ... list.obj
 	@echo ... list.i
@@ -241,6 +288,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... test.obj
+	@echo ... test.i
+	@echo ... test.s
 .PHONY : help
 
 

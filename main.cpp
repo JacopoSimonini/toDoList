@@ -38,6 +38,7 @@ void read(ListOfList& myListOfLists, string title) {
     string line;
     List* currentList = nullptr;
 
+
     while (getline(file, line)) {
         if (!line.empty()) {
             if (line.find("List: ") != string::npos) {
@@ -112,8 +113,6 @@ int main() {
 
     write(myListOfLists,"todo_lists.txt");
     write(example,"example.txt");
-
-
 
     return 0;
 }
