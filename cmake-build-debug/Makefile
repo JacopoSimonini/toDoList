@@ -155,65 +155,65 @@ TestProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/build
 .PHONY : TestProject/fast
 
-list.obj: list.cpp.obj
+List.obj: List.cpp.obj
 
-.PHONY : list.obj
-
-# target to build an object file
-list.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.obj
-.PHONY : list.cpp.obj
-
-list.i: list.cpp.i
-
-.PHONY : list.i
-
-# target to preprocess a source file
-list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.i
-.PHONY : list.cpp.i
-
-list.s: list.cpp.s
-
-.PHONY : list.s
-
-# target to generate assembly for a file
-list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/list.cpp.s
-.PHONY : list.cpp.s
-
-listOfLists.obj: listOfLists.cpp.obj
-
-.PHONY : listOfLists.obj
+.PHONY : List.obj
 
 # target to build an object file
-listOfLists.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.obj
-.PHONY : listOfLists.cpp.obj
+List.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.obj
+.PHONY : List.cpp.obj
 
-listOfLists.i: listOfLists.cpp.i
+List.i: List.cpp.i
 
-.PHONY : listOfLists.i
+.PHONY : List.i
 
 # target to preprocess a source file
-listOfLists.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.i
-.PHONY : listOfLists.cpp.i
+List.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.i
+.PHONY : List.cpp.i
 
-listOfLists.s: listOfLists.cpp.s
+List.s: List.cpp.s
 
-.PHONY : listOfLists.s
+.PHONY : List.s
 
 # target to generate assembly for a file
-listOfLists.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/listOfLists.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/listOfLists.cpp.s
-.PHONY : listOfLists.cpp.s
+List.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.s
+.PHONY : List.cpp.s
+
+ListOfLists.obj: ListOfLists.cpp.obj
+
+.PHONY : ListOfLists.obj
+
+# target to build an object file
+ListOfLists.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.obj
+.PHONY : ListOfLists.cpp.obj
+
+ListOfLists.i: ListOfLists.cpp.i
+
+.PHONY : ListOfLists.i
+
+# target to preprocess a source file
+ListOfLists.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.i
+.PHONY : ListOfLists.cpp.i
+
+ListOfLists.s: ListOfLists.cpp.s
+
+.PHONY : ListOfLists.s
+
+# target to generate assembly for a file
+ListOfLists.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.s
+.PHONY : ListOfLists.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -279,12 +279,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... TestProject
 	@echo ... ToDoList
-	@echo ... list.obj
-	@echo ... list.i
-	@echo ... list.s
-	@echo ... listOfLists.obj
-	@echo ... listOfLists.i
-	@echo ... listOfLists.s
+	@echo ... List.obj
+	@echo ... List.i
+	@echo ... List.s
+	@echo ... ListOfLists.obj
+	@echo ... ListOfLists.i
+	@echo ... ListOfLists.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

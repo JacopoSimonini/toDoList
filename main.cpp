@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
-#include "toDo.h"
-#include "list.h"
-#include "listOfLists.h"
+#include "ToDo.h"
+#include "List.h"
+#include "ListOfLists.h"
 
 using namespace std;
 
@@ -111,8 +111,9 @@ int main() {
 
     //myListOfLists.removeList("Study");
 
+
     write(myListOfLists,"todo_lists.txt");
     write(example,"example.txt");
 
-    return 0;
+   return 0;
 }

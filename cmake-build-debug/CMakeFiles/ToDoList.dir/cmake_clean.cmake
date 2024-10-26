@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ToDoList.dir/list.cpp.obj"
-  "CMakeFiles/ToDoList.dir/listOfLists.cpp.obj"
+  "CMakeFiles/ToDoList.dir/List.cpp.obj"
+  "CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj"
   "CMakeFiles/ToDoList.dir/main.cpp.obj"
   "ToDoList.exe"
   "ToDoList.exe.manifest"

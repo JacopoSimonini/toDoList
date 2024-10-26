@@ -34,10 +34,6 @@ public:
     void setCompleted(bool isCompleted) {
         completed = isCompleted;
     }
-
-    void display() const {
-        cout << "ToDo: " << name<< " | Completed: " << (completed ? "Yes" : "No") << endl;
-    }
 };
 
 

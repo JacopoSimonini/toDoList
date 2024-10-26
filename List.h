@@ -5,7 +5,7 @@
 #ifndef TODOLIST_LIST_H
 #define TODOLIST_LIST_H
 
-#include "toDo.h"
+#include "ToDo.h"
 #include <list>
 
 using namespace std;
@@ -24,12 +24,6 @@ void add(const ToDo& todo);
 void remove(const string& name);
 
 void setCompleted(const string& name);
-
-void displayCompleted();
-
-void displayNotCompleted();
-
-void display() const;
 
 const string &getTitle() const {
     return title;

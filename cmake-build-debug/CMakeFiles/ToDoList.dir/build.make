@@ -89,44 +89,44 @@ CMakeFiles/ToDoList.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ToDoList.dir/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\Desktop\C++ projects\ToDoList\main.cpp" -o CMakeFiles\ToDoList.dir\main.cpp.s
 
-CMakeFiles/ToDoList.dir/list.cpp.obj: CMakeFiles/ToDoList.dir/flags.make
-CMakeFiles/ToDoList.dir/list.cpp.obj: ../list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ToDoList.dir/list.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ToDoList.dir\list.cpp.obj -c "C:\Users\simon\Desktop\C++ projects\ToDoList\list.cpp"
+CMakeFiles/ToDoList.dir/List.cpp.obj: CMakeFiles/ToDoList.dir/flags.make
+CMakeFiles/ToDoList.dir/List.cpp.obj: ../List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ToDoList.dir/List.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ToDoList.dir\List.cpp.obj -c "C:\Users\simon\Desktop\C++ projects\ToDoList\List.cpp"
 
-CMakeFiles/ToDoList.dir/list.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ToDoList.dir/list.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\Desktop\C++ projects\ToDoList\list.cpp" > CMakeFiles\ToDoList.dir\list.cpp.i
+CMakeFiles/ToDoList.dir/List.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ToDoList.dir/List.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\Desktop\C++ projects\ToDoList\List.cpp" > CMakeFiles\ToDoList.dir\List.cpp.i
 
-CMakeFiles/ToDoList.dir/list.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ToDoList.dir/list.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\Desktop\C++ projects\ToDoList\list.cpp" -o CMakeFiles\ToDoList.dir\list.cpp.s
+CMakeFiles/ToDoList.dir/List.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ToDoList.dir/List.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\Desktop\C++ projects\ToDoList\List.cpp" -o CMakeFiles\ToDoList.dir\List.cpp.s
 
-CMakeFiles/ToDoList.dir/listOfLists.cpp.obj: CMakeFiles/ToDoList.dir/flags.make
-CMakeFiles/ToDoList.dir/listOfLists.cpp.obj: ../listOfLists.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ToDoList.dir/listOfLists.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ToDoList.dir\listOfLists.cpp.obj -c "C:\Users\simon\Desktop\C++ projects\ToDoList\listOfLists.cpp"
+CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj: CMakeFiles/ToDoList.dir/flags.make
+CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj: ../ListOfLists.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ToDoList.dir\ListOfLists.cpp.obj -c "C:\Users\simon\Desktop\C++ projects\ToDoList\ListOfLists.cpp"
 
-CMakeFiles/ToDoList.dir/listOfLists.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ToDoList.dir/listOfLists.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\Desktop\C++ projects\ToDoList\listOfLists.cpp" > CMakeFiles\ToDoList.dir\listOfLists.cpp.i
+CMakeFiles/ToDoList.dir/ListOfLists.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ToDoList.dir/ListOfLists.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\Desktop\C++ projects\ToDoList\ListOfLists.cpp" > CMakeFiles\ToDoList.dir\ListOfLists.cpp.i
 
-CMakeFiles/ToDoList.dir/listOfLists.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ToDoList.dir/listOfLists.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\Desktop\C++ projects\ToDoList\listOfLists.cpp" -o CMakeFiles\ToDoList.dir\listOfLists.cpp.s
+CMakeFiles/ToDoList.dir/ListOfLists.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ToDoList.dir/ListOfLists.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\Desktop\C++ projects\ToDoList\ListOfLists.cpp" -o CMakeFiles\ToDoList.dir\ListOfLists.cpp.s
 
 # Object files for target ToDoList
 ToDoList_OBJECTS = \
 "CMakeFiles/ToDoList.dir/main.cpp.obj" \
-"CMakeFiles/ToDoList.dir/list.cpp.obj" \
-"CMakeFiles/ToDoList.dir/listOfLists.cpp.obj"
+"CMakeFiles/ToDoList.dir/List.cpp.obj" \
+"CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj"
 
 # External object files for target ToDoList
 ToDoList_EXTERNAL_OBJECTS =
 
 ToDoList.exe: CMakeFiles/ToDoList.dir/main.cpp.obj
-ToDoList.exe: CMakeFiles/ToDoList.dir/list.cpp.obj
-ToDoList.exe: CMakeFiles/ToDoList.dir/listOfLists.cpp.obj
+ToDoList.exe: CMakeFiles/ToDoList.dir/List.cpp.obj
+ToDoList.exe: CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj
 ToDoList.exe: CMakeFiles/ToDoList.dir/build.make
 ToDoList.exe: CMakeFiles/ToDoList.dir/linklibs.rsp
 ToDoList.exe: CMakeFiles/ToDoList.dir/objects1.rsp

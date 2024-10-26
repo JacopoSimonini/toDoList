@@ -3,9 +3,9 @@
 //
 
 #include <cassert>
-#include "toDo.h"
-#include "list.h"
-#include "listOfLists.h"
+#include "ToDo.h"
+#include "List.h"
+#include "ListOfLists.h"
 
 using namespace std;
 

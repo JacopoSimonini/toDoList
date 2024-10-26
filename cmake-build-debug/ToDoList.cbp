@@ -122,19 +122,23 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/list.cpp">
+		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/List.cpp">
 			<Option target="ToDoList"/>
 			<Option target="TestProject"/>
 		</Unit>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/list.h">
+		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/List.h">
 			<Option target="ToDoList"/>
 			<Option target="TestProject"/>
 		</Unit>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/listOfLists.cpp">
+		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/ListOfLists.cpp">
 			<Option target="ToDoList"/>
 			<Option target="TestProject"/>
 		</Unit>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/listOfLists.h">
+		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/ListOfLists.h">
+			<Option target="ToDoList"/>
+			<Option target="TestProject"/>
+		</Unit>
+		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/ToDo.h">
 			<Option target="ToDoList"/>
 			<Option target="TestProject"/>
 		</Unit>
@@ -142,10 +146,6 @@
 			<Option target="ToDoList"/>
 		</Unit>
 		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/test.cpp">
-			<Option target="TestProject"/>
-		</Unit>
-		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/toDo.h">
-			<Option target="ToDoList"/>
 			<Option target="TestProject"/>
 		</Unit>
 		<Unit filename="C:/Users/simon/Desktop/C++ projects/ToDoList/CMakeLists.txt">

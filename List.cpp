@@ -4,7 +4,7 @@
 
 #include <list>
 #include <iostream>
-#include "list.h"
+#include "List.h"
 
 using namespace std;
 
@@ -19,8 +19,6 @@ void List::add(const ToDo& todo) {
     if(!verify){
         lista.push_back(todo);
     }
-
-
 }
 
 void List::remove(const string& name) {
@@ -41,26 +39,4 @@ void List::setCompleted(const string& name) {
         }
     }
         cout << "ToDo not found." << endl;
-}
-
-void List::displayCompleted(){
-    for (const auto& todo : lista) {
-        if (todo.isCompleted()) {
-            todo.display();
-        }
-    }
-}
-
-void List::displayNotCompleted(){
-    for (const auto& todo : lista) {
-        if (!todo.isCompleted()) {
-            todo.display();
-        }
-    }
-}
-
-void List::display() const {
-    for (const auto& todo : lista) {
-        todo.display();
-    }
 }

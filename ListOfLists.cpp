@@ -2,7 +2,7 @@
 // Created by simon on 12/10/2024.
 //
 
-#include "listOfLists.h"
+#include "ListOfLists.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -38,14 +38,6 @@ void ListOfList::removeList(const string& title) {
     if (!found) {
         throw (out_of_range) "List not found";
     }
-}
-
-void ListOfList::displayAll() {
-    cout << "List:" << endl;
-    for (const auto& list : lists){
-        list.display();
-    }
-    cout << "End List" << endl;
 }
 
 List& ListOfList::getList(const string& title) {
