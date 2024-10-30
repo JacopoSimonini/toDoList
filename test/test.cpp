@@ -3,9 +3,9 @@
 //
 
 #include <cassert>
-#include "ToDo.h"
-#include "List.h"
-#include "ListOfLists.h"
+#include "../ToDo.h"
+#include "../List.h"
+#include "../ListOfLists.h"
 
 using namespace std;
 
@@ -19,16 +19,33 @@ void testToDo() {
 }
 
 void testList() {
-    List workList("Work");
-    workList.add(ToDo("Prepare report", false));
-    workList.add(ToDo("Email client", false));
+    List workList("Personal");
+    assert(workList.getTitle() == "Personal");
+
+    workList.setTitle("Work");
     assert(workList.getTitle() == "Work");
-    assert(workList.getTodos().size() == 2);
+    assert(workList.numberOfTodos() == 0);
+    assert(workList.add(ToDo("Prepare report", false)) == true);
+    assert(workList.add(ToDo("Email client", false)) == true);
+    assert(workList.numberOfTodos() == 2);
+    assert(workList.numberOfCompletedTodos() == 0);
+
+    ToDo foundTodo = workList.findTodoByKeyword("report");
+    assert(foundTodo.getName() == "Prepare report");
+    foundTodo = workList.findTodoByKeyword("meeting");
+    assert(foundTodo.getName() == "");
+
     workList.setCompleted("Prepare report");
     auto it = workList.getTodos().begin();
     assert(it->isCompleted() == true);
+    assert(workList.numberOfCompletedTodos() == 1);
+
+    assert(workList.remove("Email client") == true);
+    assert(workList.numberOfTodos() == 1);
+    assert(workList.remove("Fake ToDo") == false); //dovrebbe stampare "ToDo not found."
     cout << "testList passed." << endl;
 }
+
 
 void testListOfLists() {
     ListOfList myLists;

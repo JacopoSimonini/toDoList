@@ -1,4 +1,6 @@
 C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir
-C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/TestProject.dir
 C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/test/CMakeFiles/TestProject.dir
+C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir

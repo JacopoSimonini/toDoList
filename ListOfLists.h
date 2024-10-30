@@ -19,12 +19,16 @@ public:
 
     void removeList(const std::string& title);
 
-    List& getList(const string& title);
+    //metodo che rende tutti i nomi delle liste
+    //metodo aggiungere e rimuovi todo
+    //metodo sposta todo (title di dove è,title di dove andrà)
 
+    List& getList(const string& title);
 
     const list<List>& getLists() const {
         return lists;
-    }
+    }//togliere
+
 
 };
 

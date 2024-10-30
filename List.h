@@ -19,9 +19,21 @@ public:
 List(const string& title)
         : title(title) {}
 
-void add(const ToDo& todo);
+bool add(const ToDo& todo);
 
-void remove(const string& name);
+bool remove(const string& name);
+
+int numberOfTodos() const {
+    return lista.size();
+}
+
+int numberOfCompletedTodos() const;
+
+void setTitle(const string& newTitle){
+    title = newTitle;
+}
+
+ToDo findTodoByKeyword(const string& keyword);
 
 void setCompleted(const string& name);
 
@@ -29,6 +41,7 @@ const string &getTitle() const {
     return title;
 }
 
+//rimuovere
 const list<ToDo>& getTodos() const {
     return lista;
 }

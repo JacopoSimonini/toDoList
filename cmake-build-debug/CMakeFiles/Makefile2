@@ -73,20 +73,38 @@ CMAKE_BINARY_DIR = "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-deb
 
 # The main recursive "all" target.
 all: CMakeFiles/ToDoList.dir/all
-all: CMakeFiles/TestProject.dir/all
+all: test/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: test/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/ToDoList.dir/clean
-clean: CMakeFiles/TestProject.dir/clean
+clean: test/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test
+
+# Recursive "all" directory target.
+test/all: test/CMakeFiles/TestProject.dir/all
+
+.PHONY : test/all
+
+# Recursive "preinstall" directory target.
+test/preinstall:
+
+.PHONY : test/preinstall
+
+# Recursive "clean" directory target.
+test/clean: test/CMakeFiles/TestProject.dir/clean
+
+.PHONY : test/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ToDoList.dir
@@ -116,31 +134,31 @@ CMakeFiles/ToDoList.dir/clean:
 .PHONY : CMakeFiles/ToDoList.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestProject.dir
+# Target rules for target test/CMakeFiles/TestProject.dir
 
 # All Build rule for target.
-CMakeFiles/TestProject.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/build
+test/CMakeFiles/TestProject.dir/all:
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\TestProject.dir\build.make test/CMakeFiles/TestProject.dir/depend
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\TestProject.dir\build.make test/CMakeFiles/TestProject.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4 "Built target TestProject"
-.PHONY : CMakeFiles/TestProject.dir/all
+.PHONY : test/CMakeFiles/TestProject.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestProject.dir/rule: cmake_check_build_system
+test/CMakeFiles/TestProject.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/TestProject.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/CMakeFiles/TestProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\simon\Desktop\C++ projects\ToDoList\cmake-build-debug\CMakeFiles" 0
-.PHONY : CMakeFiles/TestProject.dir/rule
+.PHONY : test/CMakeFiles/TestProject.dir/rule
 
 # Convenience name for target.
-TestProject: CMakeFiles/TestProject.dir/rule
+TestProject: test/CMakeFiles/TestProject.dir/rule
 
 .PHONY : TestProject
 
 # clean rule for target.
-CMakeFiles/TestProject.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/clean
-.PHONY : CMakeFiles/TestProject.dir/clean
+test/CMakeFiles/TestProject.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\TestProject.dir\build.make test/CMakeFiles/TestProject.dir/clean
+.PHONY : test/CMakeFiles/TestProject.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

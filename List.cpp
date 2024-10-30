@@ -8,28 +8,30 @@
 
 using namespace std;
 
-void List::add(const ToDo& todo) {
-    bool verify = false;
-    for(const auto& i : lista){
-        if( todo.getName() == i.getName()){
-            cout << "You cannot have todo with the same name" <<endl;
-            verify = true;
+bool List::add(const ToDo& todo) {
+    for (const auto& i : lista) {
+        if (todo.getName() == i.getName()) {
+            cout << "You cannot have todo with the same name" << endl;
+            return false;
         }
     }
-    if(!verify){
-        lista.push_back(todo);
-    }
+
+    lista.push_back(todo);
+    return true;
 }
 
-void List::remove(const string& name) {
+
+bool List::remove(const string& name) {
     for (auto i = lista.begin(); i != lista.end(); ++i) {
         if (i->getName() == name) {
             lista.erase(i);
-            return;
+            return true;
         }
     }
     cout << "ToDo not found." << endl;
+    return false;
 }
+
 
 void List::setCompleted(const string& name) {
     for (auto i = lista.begin(); i != lista.end(); ++i) {
@@ -40,3 +42,23 @@ void List::setCompleted(const string& name) {
     }
         cout << "ToDo not found." << endl;
 }
+
+int List::numberOfCompletedTodos() const {
+    int count = 0;
+    for (const auto& todo : lista) {
+        if (todo.isCompleted()) {
+            count++;
+        }
+    }
+    return count;
+}
+
+ToDo List::findTodoByKeyword(const string& keyword) {
+    for (const auto& todo : lista) {
+        if (todo.getName().find(keyword) != string::npos) {
+            return todo;
+        }
+    }
+    return ToDo(); //ritorno un todo vuoto nel caso non trovi nulla
+}
+

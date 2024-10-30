@@ -13,7 +13,6 @@ void write(const ListOfList& myListOfLists, string title) {
         return;
     }
 
-
     for (const auto& list : myListOfLists.getLists()) {
         file << "List: " << list.getTitle() << endl;
         for (const auto& todo : list.getTodos()) {
@@ -37,7 +36,6 @@ void read(ListOfList& myListOfLists, string title) {
 
     string line;
     List* currentList = nullptr;
-
 
     while (getline(file, line)) {
         if (!line.empty()) {

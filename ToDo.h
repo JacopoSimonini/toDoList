@@ -16,6 +16,9 @@ private:
     bool completed;
 
 public:
+    ToDo()
+        : name(""), completed(false) {}
+
     ToDo(const string& name, bool completed = false)
             : name(name), completed(completed) {}
 

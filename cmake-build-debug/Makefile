@@ -152,7 +152,7 @@ TestProject: cmake_check_build_system
 
 # fast build rule for target.
 TestProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/build
+	$(MAKE) $(MAKESILENT) -f test\CMakeFiles\TestProject.dir\build.make test/CMakeFiles/TestProject.dir/build
 .PHONY : TestProject/fast
 
 List.obj: List.cpp.obj
@@ -162,7 +162,6 @@ List.obj: List.cpp.obj
 # target to build an object file
 List.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.obj
 .PHONY : List.cpp.obj
 
 List.i: List.cpp.i
@@ -172,7 +171,6 @@ List.i: List.cpp.i
 # target to preprocess a source file
 List.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.i
 .PHONY : List.cpp.i
 
 List.s: List.cpp.s
@@ -182,7 +180,6 @@ List.s: List.cpp.s
 # target to generate assembly for a file
 List.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/List.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/List.cpp.s
 .PHONY : List.cpp.s
 
 ListOfLists.obj: ListOfLists.cpp.obj
@@ -192,7 +189,6 @@ ListOfLists.obj: ListOfLists.cpp.obj
 # target to build an object file
 ListOfLists.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.obj
 .PHONY : ListOfLists.cpp.obj
 
 ListOfLists.i: ListOfLists.cpp.i
@@ -202,7 +198,6 @@ ListOfLists.i: ListOfLists.cpp.i
 # target to preprocess a source file
 ListOfLists.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.i
 .PHONY : ListOfLists.cpp.i
 
 ListOfLists.s: ListOfLists.cpp.s
@@ -212,7 +207,6 @@ ListOfLists.s: ListOfLists.cpp.s
 # target to generate assembly for a file
 ListOfLists.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/ListOfLists.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/ListOfLists.cpp.s
 .PHONY : ListOfLists.cpp.s
 
 main.obj: main.cpp.obj
@@ -242,33 +236,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ToDoList.dir\build.make CMakeFiles/ToDoList.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test.obj: test.cpp.obj
-
-.PHONY : test.obj
-
-# target to build an object file
-test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.obj
-.PHONY : test.cpp.obj
-
-test.i: test.cpp.i
-
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.i
-.PHONY : test.cpp.i
-
-test.s: test.cpp.s
-
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestProject.dir\build.make CMakeFiles/TestProject.dir/test.cpp.s
-.PHONY : test.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -288,9 +255,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... test.obj
-	@echo ... test.i
-	@echo ... test.s
 .PHONY : help
 
 

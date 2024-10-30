@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/simon/Desktop/C++ projects/ToDoList/List.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/List.cpp.obj"
-  "C:/Users/simon/Desktop/C++ projects/ToDoList/ListOfLists.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/listOfLists.cpp.obj"
+  "C:/Users/simon/Desktop/C++ projects/ToDoList/ListOfLists.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/ListOfLists.cpp.obj"
   "C:/Users/simon/Desktop/C++ projects/ToDoList/main.cpp" "C:/Users/simon/Desktop/C++ projects/ToDoList/cmake-build-debug/CMakeFiles/ToDoList.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
