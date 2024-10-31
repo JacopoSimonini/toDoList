@@ -13,9 +13,9 @@ void write(const ListOfList& myListOfLists, string title) {
         return;
     }
 
-    for (const auto& list : myListOfLists.getLists()) {
-        file << "List: " << list.getTitle() << endl;
-        for (const auto& todo : list.getTodos()) {
+    for (const auto& list :  myListOfLists.lists) {
+        file << "List: " << list.title << endl;
+        for (const auto& todo : list.lista) {
             file << todo.getName() << ": " << (todo.isCompleted() ? "Completed" : "Not_Completed") << endl;
         }
         file << endl;
@@ -100,8 +100,6 @@ int main() {
 
     personalList.add(ToDo("Buy groceries"));
     personalList.add(ToDo("Call mom"));
-
-    //myListOfLists.displayAll();
 
     personalList.setCompleted("Call mom");
     studyList.setCompleted("c++");

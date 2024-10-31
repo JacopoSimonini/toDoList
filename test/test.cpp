@@ -36,8 +36,6 @@ void testList() {
     assert(foundTodo.getName() == "");
 
     workList.setCompleted("Prepare report");
-    auto it = workList.getTodos().begin();
-    assert(it->isCompleted() == true);
     assert(workList.numberOfCompletedTodos() == 1);
 
     assert(workList.remove("Email client") == true);
@@ -51,10 +49,10 @@ void testListOfLists() {
     ListOfList myLists;
     myLists.newList("Work");
     myLists.newList("Personal");
-    assert(myLists.getLists().size() == 2);
+    assert(myLists.numberOfLists() == 2);
     auto& workList = myLists.getList("Work");
     workList.add(ToDo("Prepare report", false));
-    assert(workList.getTodos().size() == 1);
+    assert(workList.numberOfTodos() == 1);
     cout << "testListOfLists passed." << endl;
 }
 
@@ -63,8 +61,6 @@ int main() {
     testToDo();
     testList();
     testListOfLists();
-
-    cout << "All tests passed" << endl;
 
     return 0;
 }

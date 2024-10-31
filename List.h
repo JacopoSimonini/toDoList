@@ -10,7 +10,11 @@
 
 using namespace std;
 
+class ListOfList;   //forward declaration
+
 class List {
+friend void write(const ListOfList& myListOfLists, string title);
+
 private:
 string title;
 list<ToDo> lista;
@@ -18,6 +22,7 @@ list<ToDo> lista;
 public:
 List(const string& title)
         : title(title) {}
+
 
 bool add(const ToDo& todo);
 
@@ -39,11 +44,6 @@ void setCompleted(const string& name);
 
 const string &getTitle() const {
     return title;
-}
-
-//rimuovere
-const list<ToDo>& getTodos() const {
-    return lista;
 }
 
 };

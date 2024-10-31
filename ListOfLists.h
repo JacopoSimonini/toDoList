@@ -11,6 +11,7 @@
 using namespace std;
 
 class ListOfList {
+    friend void write(const ListOfList& myListOfLists, string title);
 private:
     list<List> lists;
 
@@ -19,16 +20,16 @@ public:
 
     void removeList(const std::string& title);
 
+    int numberOfLists() const {
+        return lists.size();
+    }
+
     //metodo che rende tutti i nomi delle liste
-    //metodo aggiungere e rimuovi todo
+    //metodo aggiungere todo
+    //metodo rimuove todo
     //metodo sposta todo (title di dove è,title di dove andrà)
 
     List& getList(const string& title);
-
-    const list<List>& getLists() const {
-        return lists;
-    }//togliere
-
 
 };
 
