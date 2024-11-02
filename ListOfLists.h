@@ -24,10 +24,13 @@ public:
         return lists.size();
     }
 
-    //metodo che rende tutti i nomi delle liste
-    //metodo aggiungere todo
-    //metodo rimuove todo
-    //metodo sposta todo (title di dove è,title di dove andrà)
+    list<string> getAllListNames() const;
+
+    bool addTodo(const string& listTitle, const ToDo& todo);
+
+    bool removeTodo(const string& listTitle, const string& todoName);
+
+    bool moveTodo(const string& sourceListTitle, const string& destinationListTitle, const string& todoName);
 
     List& getList(const string& title);
 
