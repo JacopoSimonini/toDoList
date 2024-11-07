@@ -1,5 +1,5 @@
 add_subdirectory(googletest-main)
-add_executable(TestProject test.cpp)
+add_executable(TestProject test.cpp ToDoTest.cpp ListTest.cpp ListOfListsTest.cpp ReadWriteTest.cpp)
 
 target_sources(TestProject PRIVATE
         ${CMAKE_SOURCE_DIR}/ToDo.h
