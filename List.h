@@ -38,7 +38,9 @@ void setTitle(const string& newTitle){
     title = newTitle;
 }
 
-ToDo findTodoByKeyword(const string& keyword);
+ToDo findFirstTodoByKeyword(const string& keyword);
+
+list<ToDo> findTodosByKeyword(const string& keyword);
 
 void setCompleted(const string& name);
 

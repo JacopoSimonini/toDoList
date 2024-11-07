@@ -53,12 +53,24 @@ int List::numberOfCompletedTodos() const {
     return count;
 }
 
-ToDo List::findTodoByKeyword(const string& keyword) {
+ToDo List::findFirstTodoByKeyword(const string& keyword) {
     for (const auto& todo : lista) {
         if (todo.getName().find(keyword) != string::npos) {
             return todo;
         }
     }
     return ToDo(); //ritorno un todo vuoto nel caso non trovi nulla
+}
+
+list<ToDo> List::findTodosByKeyword(const string& keyword) {
+    list<ToDo> matchingTodos;
+
+    for (const auto& todo : lista) {
+        if (todo.getName().find(keyword) != string::npos) {
+            matchingTodos.push_back(todo);
+        }
+    }
+
+    return matchingTodos;
 }
 

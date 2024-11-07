@@ -95,7 +95,9 @@ bool ListOfList::moveTodo(const string& sourceListTitle, const string& destinati
         return false;
     }
 
-    ToDo todo = sourceIt->findTodoByKeyword(todoName);
+
+
+    ToDo todo = sourceIt->findFirstTodoByKeyword(todoName);
 
     if (todo.getName().empty()) {
         cout << "ToDo not found in the source list." << endl;

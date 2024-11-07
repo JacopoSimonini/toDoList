@@ -1,15 +1,17 @@
 //
 // Created by simon on 22/10/2024.
 //
-
+#include <string>
+#include <fstream>
+#include <iostream>
 #include <cassert>
 #include "../ToDo.h"
 #include "../List.h"
 #include "../ListOfLists.h"
-#include <windows.h>
+#include "../utility.h"
 
 using namespace std;
-
+// google test
 void testToDo() {
     ToDo task("Buy groceries", false);
     assert(task.getName() == "Buy groceries");
@@ -17,9 +19,7 @@ void testToDo() {
     task.setCompleted(true);
     assert(task.isCompleted() == true);
 
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
     cout << "testToDo passed." << endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 }
 
 void testList() {
@@ -34,21 +34,31 @@ void testList() {
     assert(workList.numberOfTodos() == 2);
     assert(workList.numberOfCompletedTodos() == 0);
 
-    ToDo foundTodo = workList.findTodoByKeyword("report");
+    ToDo foundTodo = workList.findFirstTodoByKeyword("report");
     assert(foundTodo.getName() == "Prepare report");
-    foundTodo = workList.findTodoByKeyword("meeting");
+    foundTodo = workList.findFirstTodoByKeyword("meeting");
     assert(foundTodo.getName() == "");
+
+    List myList("TestList");
+    myList.add(ToDo("Prepare report", false));
+    myList.add(ToDo("Prepare presentation", true));
+    myList.add(ToDo("Buy groceries", true));
+    auto result1 = myList.findTodosByKeyword("groceries");
+    assert(result1.size() == 1);
+    assert(result1.front().getName() == "Buy groceries");
+    auto result2 = myList.findTodosByKeyword("meeting");
+    assert(result2.empty());
+    auto result3 = myList.findTodosByKeyword("Prepare");
+    assert(result3.size() == 2);
 
     workList.setCompleted("Prepare report");
     assert(workList.numberOfCompletedTodos() == 1);
 
     assert(workList.remove("Email client") == true);
     assert(workList.numberOfTodos() == 1);
-    assert(workList.remove("Fake ToDo") == false); //dovrebbe stampare "ToDo not found."
+    assert(workList.remove("Fake ToDo") == false); //stampa "ToDo not found."
 
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
     cout << "testList passed." << endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 }
 
 
@@ -115,22 +125,56 @@ void testListOfLists() {
     assert(lists.getList("Work").numberOfCompletedTodos() == 1);
     assert(lists.moveTodo("Personal", "Personal", "Prepare report") == false);    // sposto un todo tra la stessa lista
 
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
     cout << "testListOfLists passed." << endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 }
 
+
+void testReadWrite() {
+    ListOfList lists;
+    lists.newList("Work");
+    lists.newList("Personal");
+
+    lists.getList("Work").add(ToDo("Prepare report", false));
+    lists.getList("Work").add(ToDo("Email client", true));
+    lists.getList("Personal").add(ToDo("Buy groceries", false));
+    lists.getList("Personal").add(ToDo("Exercise", true));
+
+    string filename = "test_file.txt";
+
+    write(lists, filename);
+
+    ifstream infile(filename);
+    assert(infile.is_open());
+    infile.close();
+
+    ListOfList loadedLists;
+    read(loadedLists, filename);
+
+
+    auto& loadedWorkList = loadedLists.getList("Work");
+    assert(loadedWorkList.numberOfTodos() == 2);
+    assert(loadedWorkList.findFirstTodoByKeyword("Prepare report").isCompleted() == false);
+    assert(loadedWorkList.findFirstTodoByKeyword("Email client").isCompleted() == true);
+
+    auto& loadedPersonalList = loadedLists.getList("Personal");
+    assert(loadedPersonalList.numberOfTodos() == 2);
+    assert(loadedPersonalList.findFirstTodoByKeyword("Buy groceries").isCompleted() == false);
+    assert(loadedPersonalList.findFirstTodoByKeyword("Exercise").isCompleted() == true);
+
+    remove(filename.c_str());
+
+    cout << "All tests for read and write passed successfully." << endl;
+}
 
 int main() {
 
     testToDo();
     testList();
     testListOfLists();
+    testReadWrite();
 
     cout << endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);   //colora il terminale di verde (7 al posto del 2 per tornare grigio)
     cout << "All tests passed." << endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 
     return 0;
 }

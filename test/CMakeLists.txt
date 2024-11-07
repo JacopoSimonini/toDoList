@@ -1,4 +1,4 @@
-add_executable(TestProject test.cpp)
+add_executable(TestProject test.cpp ../utility.h)
 
 target_sources(TestProject PRIVATE
         ${CMAKE_SOURCE_DIR}/ToDo.h
