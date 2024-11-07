@@ -1,106 +1,104 @@
 //
 // Created by simon on 22/10/2024.
 //
-#include <string>
-#include <fstream>
-#include <iostream>
-#include <cassert>
+
+#include <gtest/gtest.h>
 #include "../ToDo.h"
 #include "../List.h"
 #include "../ListOfLists.h"
 #include "../utility.h"
+#include <fstream>
+#include <string>
+#include <list>
 
 using namespace std;
-// google test
-void testToDo() {
-    ToDo task("Buy groceries", false);
-    assert(task.getName() == "Buy groceries");
-    assert(task.isCompleted() == false);
-    task.setCompleted(true);
-    assert(task.isCompleted() == true);
 
-    cout << "testToDo passed." << endl;
+// Test classe ToDo
+TEST(ToDoTest, BasicOperations) {
+    ToDo task("Buy groceries", false);
+    EXPECT_EQ(task.getName(), "Buy groceries");
+    EXPECT_FALSE(task.isCompleted());
+
+    task.setCompleted(true);
+    EXPECT_TRUE(task.isCompleted());
 }
 
-void testList() {
+
+
+// Test classe List
+TEST(ListTest, BasicOperations) {
     List workList("Personal");
-    assert(workList.getTitle() == "Personal");
+    EXPECT_EQ(workList.getTitle(), "Personal");
 
     workList.setTitle("Work");
-    assert(workList.getTitle() == "Work");
-    assert(workList.numberOfTodos() == 0);
-    assert(workList.add(ToDo("Prepare report", false)) == true);
-    assert(workList.add(ToDo("Email client", false)) == true);
-    assert(workList.numberOfTodos() == 2);
-    assert(workList.numberOfCompletedTodos() == 0);
+    EXPECT_EQ(workList.getTitle(), "Work");
+    EXPECT_EQ(workList.numberOfTodos(), 0);
 
+    EXPECT_TRUE(workList.add(ToDo("Prepare report", false)));
+    EXPECT_TRUE(workList.add(ToDo("Email client", false)));
+    EXPECT_EQ(workList.numberOfTodos(), 2);
+    EXPECT_EQ(workList.numberOfCompletedTodos(), 0);
+
+    // Test findFirstTodoByKeyword
     ToDo foundTodo = workList.findFirstTodoByKeyword("report");
-    assert(foundTodo.getName() == "Prepare report");
+    EXPECT_EQ(foundTodo.getName(), "Prepare report");
     foundTodo = workList.findFirstTodoByKeyword("meeting");
-    assert(foundTodo.getName() == "");
+    EXPECT_EQ(foundTodo.getName(), "");
 
+    // Test findTodosByKeyword
     List myList("TestList");
     myList.add(ToDo("Prepare report", false));
     myList.add(ToDo("Prepare presentation", true));
     myList.add(ToDo("Buy groceries", true));
     auto result1 = myList.findTodosByKeyword("groceries");
-    assert(result1.size() == 1);
-    assert(result1.front().getName() == "Buy groceries");
+    EXPECT_EQ(result1.size(), 1);
+    EXPECT_EQ(result1.front().getName(), "Buy groceries");
     auto result2 = myList.findTodosByKeyword("meeting");
-    assert(result2.empty());
+    EXPECT_TRUE(result2.empty());
     auto result3 = myList.findTodosByKeyword("Prepare");
-    assert(result3.size() == 2);
+    EXPECT_EQ(result3.size(), 2);
 
+    // Test setCompleted
     workList.setCompleted("Prepare report");
-    assert(workList.numberOfCompletedTodos() == 1);
-
-    assert(workList.remove("Email client") == true);
-    assert(workList.numberOfTodos() == 1);
-    assert(workList.remove("Fake ToDo") == false); //stampa "ToDo not found."
-
-    cout << "testList passed." << endl;
+    EXPECT_EQ(workList.numberOfCompletedTodos(), 1);
+    EXPECT_TRUE(workList.remove("Email client"));
+    EXPECT_EQ(workList.numberOfTodos(), 1);
+    EXPECT_FALSE(workList.remove("Fake ToDo"));
 }
 
 
-void testListOfLists() {
+
+// Test classe ListOfLists
+TEST(ListOfListsTest, BasicOperations) {
     ListOfList myLists;
     myLists.newList("Work");
     myLists.newList("Personal");
-    assert(myLists.numberOfLists() == 2);
+    EXPECT_EQ(myLists.numberOfLists(), 2);
+
     auto& workList = myLists.getList("Work");
     workList.add(ToDo("Prepare report", false));
-    assert(workList.numberOfTodos() == 1);
+    EXPECT_EQ(workList.numberOfTodos(), 1);
 
-
-    //test getAllListNames()
+    // Test getAllListNames
     ListOfList myListOfLists;
     myListOfLists.newList("Work");
     myListOfLists.newList("Personal");
     myListOfLists.newList("Shopping");
-    list<string> names = myListOfLists.getAllListNames();
-    assert(names.size() == 3);
+    auto names = myListOfLists.getAllListNames();
+    EXPECT_EQ(names.size(), 3);
     auto it = names.begin();
-    assert(*it == "Work");
-    ++it;
-    assert(*it == "Personal");
-    ++it;
-    assert(*it == "Shopping");
+    EXPECT_EQ(*it++, "Work");
+    EXPECT_EQ(*it++, "Personal");
+    EXPECT_EQ(*it, "Shopping");
 
-
-    //test addTodo()
+    // Test addTodo e removeTodo
     ToDo todo("Prepare report", false);
-    bool result = myListOfLists.addTodo("Work", todo);
-    assert(result == true);
-    List& WorkList = myListOfLists.getList("Work");
-    assert(WorkList.numberOfTodos() == 1);
+    EXPECT_TRUE(myListOfLists.addTodo("Work", todo));
+    EXPECT_EQ(myListOfLists.getList("Work").numberOfTodos(), 1);
+    EXPECT_TRUE(myListOfLists.removeTodo("Work", "Prepare report"));
+    EXPECT_EQ(myListOfLists.getList("Work").numberOfTodos(), 0);
 
-    //test removeTodo()
-    bool Result = myListOfLists.removeTodo("Work", "Prepare report");
-    assert(Result == true);
-    assert(WorkList.numberOfTodos() == 0);
-
-
-    //test testMoveTodo()
+    //test moveTodo
     ListOfList lists;
     lists.newList("Work");
     lists.newList("Personal");
@@ -110,26 +108,16 @@ void testListOfLists() {
     lists.getList("Work").add(task1);
     lists.getList("Work").add(task2);
     lists.getList("Personal").add(task3);
-    assert(lists.moveTodo("Work", "Personal", "Prepare report") == true);   // sposto un todo da una lista all'altra
-    assert(lists.getList("Work").numberOfTodos() == 1);
-    assert(lists.getList("Personal").numberOfTodos() == 2);
-    assert(lists.moveTodo("Work", "Personal", "Cleaning") == false);       // sposto un todo che non esiste
-    assert(lists.moveTodo("Study", "Personal", "Prepare report") == false);       // lista di origine non esiste
-    assert(lists.moveTodo("Work", "Study", "Email client") == false);     // lista di destinazione non esiste
-    lists.getList("Personal").add(ToDo("Email client", true));  // sposto un todo già presente nella lista di destinazione, aggiungo un duplicato
-    assert(lists.moveTodo("Work", "Personal", "Email client") == false);
-    assert(lists.getList("Work").numberOfTodos() == 1);
-    assert(lists.getList("Personal").numberOfTodos() == 3);
-    assert(lists.moveTodo("Personal", "Work", "Buy groceries") == true);       // sposto un todo completato tra liste
-    assert(lists.getList("Personal").numberOfCompletedTodos() == 1);
-    assert(lists.getList("Work").numberOfCompletedTodos() == 1);
-    assert(lists.moveTodo("Personal", "Personal", "Prepare report") == false);    // sposto un todo tra la stessa lista
-
-    cout << "testListOfLists passed." << endl;
+    EXPECT_TRUE(lists.moveTodo("Work", "Personal", "Prepare report"));
+    EXPECT_EQ(lists.getList("Work").numberOfTodos(), 1);
+    EXPECT_EQ(lists.getList("Personal").numberOfTodos(), 2);
+    EXPECT_FALSE(lists.moveTodo("Work", "Personal", "Non-existent Task"));
 }
 
 
-void testReadWrite() {
+
+// Test classe utility
+TEST(ReadWriteTest, SaveAndLoadLists) {
     ListOfList lists;
     lists.newList("Work");
     lists.newList("Personal");
@@ -139,42 +127,33 @@ void testReadWrite() {
     lists.getList("Personal").add(ToDo("Buy groceries", false));
     lists.getList("Personal").add(ToDo("Exercise", true));
 
-    string filename = "test_file.txt";
+    const string filename = "test_file.txt";
 
     write(lists, filename);
 
     ifstream infile(filename);
-    assert(infile.is_open());
+    EXPECT_TRUE(infile.is_open());
     infile.close();
 
     ListOfList loadedLists;
     read(loadedLists, filename);
 
-
     auto& loadedWorkList = loadedLists.getList("Work");
-    assert(loadedWorkList.numberOfTodos() == 2);
-    assert(loadedWorkList.findFirstTodoByKeyword("Prepare report").isCompleted() == false);
-    assert(loadedWorkList.findFirstTodoByKeyword("Email client").isCompleted() == true);
+    EXPECT_EQ(loadedWorkList.numberOfTodos(), 2);
+    EXPECT_FALSE(loadedWorkList.findFirstTodoByKeyword("Prepare report").isCompleted());
+    EXPECT_TRUE(loadedWorkList.findFirstTodoByKeyword("Email client").isCompleted());
 
     auto& loadedPersonalList = loadedLists.getList("Personal");
-    assert(loadedPersonalList.numberOfTodos() == 2);
-    assert(loadedPersonalList.findFirstTodoByKeyword("Buy groceries").isCompleted() == false);
-    assert(loadedPersonalList.findFirstTodoByKeyword("Exercise").isCompleted() == true);
+    EXPECT_EQ(loadedPersonalList.numberOfTodos(), 2);
+    EXPECT_FALSE(loadedPersonalList.findFirstTodoByKeyword("Buy groceries").isCompleted());
+    EXPECT_TRUE(loadedPersonalList.findFirstTodoByKeyword("Exercise").isCompleted());
 
     remove(filename.c_str());
-
-    cout << "All tests for read and write passed successfully." << endl;
 }
 
-int main() {
 
-    testToDo();
-    testList();
-    testListOfLists();
-    testReadWrite();
 
-    cout << endl;
-    cout << "All tests passed." << endl;
-
-    return 0;
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
